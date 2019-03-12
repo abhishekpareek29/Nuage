@@ -1,0 +1,9 @@
+size: 0
+color: Red
+wishlist:
+    - fly
+todo:
+  vacuum:
+    priority: very_low
+  dishes:
+    priority: very_high

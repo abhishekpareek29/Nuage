@@ -1,0 +1,9 @@
+size: 12
+color: blue
+wishlist:
+    - worldpeace
+todo:
+  vacuum:
+    priority: very_very_high
+  dishes:
+    priority: very_very_low

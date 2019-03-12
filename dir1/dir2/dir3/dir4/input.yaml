@@ -1,0 +1,10 @@
+size: 8
+count: 2
+wishlist:
+    - car
+    - pony
+todo:
+  dishes:
+    priority: high
+  laundry:
+    priority: low
