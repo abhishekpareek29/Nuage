@@ -1,3 +1,5 @@
+https://travis-ci.com/abhishekpareek29/Nuage.svg?token=tTiVGqyKDszVyzMomxYq&branch=master
+
 # Instructions
 
 RUN: python3 nuage.py ./dir1/dir2/dir3/dir4/input.yaml
