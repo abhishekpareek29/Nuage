@@ -1,4 +1,4 @@
-https://travis-ci.com/abhishekpareek29/Nuage.svg?token=tTiVGqyKDszVyzMomxYq&branch=master
+[![Build Status](https://travis-ci.com/abhishekpareek29/Nuage.svg?token=tTiVGqyKDszVyzMomxYq&branch=master)](https://travis-ci.com/abhishekpareek29/Nuage)
 
 # Instructions
 
