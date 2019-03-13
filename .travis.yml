@@ -1,0 +1,5 @@
+language: python
+python:
+  - "3.6"
+script:
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then python3 test.py fi'
