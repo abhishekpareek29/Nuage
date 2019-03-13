@@ -3,6 +3,16 @@ import sys
 import yaml
 import os
 
+# Read .yaml file.
+def read_yaml(path):
+    with open(path, 'r') as ymlfile:
+        try:
+            yaml_content = yaml.load(ymlfile)
+        except yaml.YAMLError as exc:
+            print(exc)
+
+    return yaml_content
+
 # Merge two dictionaries (conditional).
 def merge(input_yaml, parent_yaml):
     # Loop over all dictionary variable.
@@ -26,23 +36,17 @@ def main(path):
     file_name = os.path.split(path)[1]
 
     # Read main input file.
-    with open(path, 'r') as ymlfile:
-        try:
-            input_yaml = yaml.load(ymlfile)
-            parent_file = os.path.split(current_dir)[0] + '/' + file_name
-        except yaml.YAMLError as exc:
-            print(exc)
+    input_yaml = read_yaml(path)
+    parent_file = os.path.split(current_dir)[0] + '/' + file_name
 
     # Iterate over all directories while input file exists in each directory.
     while os.path.isfile(parent_file):
         parent_yaml = None
-        # Read and merge each file.
-        with open(parent_file, 'r') as ymlfile:
-            try:
-                parent_yaml = yaml.load(ymlfile)
-                merge(input_yaml, parent_yaml)
-            except yaml.YAMLError as exc:
-                print(exc)
+
+        # Read and merge files.
+        parent_yaml = read_yaml(parent_file)
+        merge(input_yaml, parent_yaml)
+
         # Change current directory.
         current_dir = os.path.split(parent_file)[0]
 
